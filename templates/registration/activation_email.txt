@@ -1,4 +1,4 @@
-Hi, {{user.username}}!
+Hi!
 Please visit the following link to confirm your account.
 
 http://localhost:8000{% url "registration_activate" activation_key=activation_key %}
