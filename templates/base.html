@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta chaset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Django Email Authentication</h3>
+    <ul>
+      {% if user.is_authenticated %}
+        <li>Logined as {{user.email}}</li>
+        <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'registration_register' %}">Register</a></li>
+        <li><a href="{% url 'auth_login' %}">Login</a></li>
+      {% endif %}
+    </ul>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>
