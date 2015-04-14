@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <h1>{{user.email}}'s profile page</h1>
+  {% else %}
+    <h1>Please login first</h1>
+  {% endif %}
+{% endblock %}
